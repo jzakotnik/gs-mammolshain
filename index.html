@@ -163,7 +163,12 @@
               var date2 = new Date("07/04/2020");
               var Difference_In_Time = date2.getTime() - date1.getTime();
               var Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+              if (Difference_In_Days > 0) {
               document.getElementById("vacationDate").innerHTML += Difference_In_Days.toString();
+            } else //there is already some vacation ongoing
+            {
+              document.getElementById("vacationDate").innerHTML += "0";
+            }
             </script>
           </div>
 
@@ -915,7 +920,7 @@
                 <img src="assets/img/team-1.jpg" alt="" />
               </div>
               <h4>Michael Henneberg</h4>
-              <span>Schulleiter</span>
+              <span>Schulleiter (Darstellung ähnlich)</span>
 
             </div>
           </div>
